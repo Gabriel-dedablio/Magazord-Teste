@@ -1,0 +1,150 @@
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;   
+  max-width: 251px; 
+  width: 100%;
+}
+.avatar{
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.7);
+  border-radius: 100%;
+  position: relative;
+}
+
+.avatar img{
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  z-index:-1;
+}
+
+.name{
+  margin-top: 24px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #262626;
+  text-align: center;
+}
+
+.subtitle{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #989898;
+  margin-top: 4px;
+  text-align: center;
+}
+
+.about{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 32px;
+  color: #0587FF;
+  width: 100%;
+}
+
+.about p, .about a{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 16px;
+  display: flex;
+  color: #0587FF;
+  align-items: center;
+  word-break: break-all;
+}
+.about p span, .about a span{
+  width: calc(100% - 15px);
+}
+.about svg{
+  width: auto;
+  height: 15px;
+  margin-right: 11px;
+}
+
+.avatar img.smiley{
+    width: 40px;
+    height: 40px;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    padding: 11px;
+    z-index: 1;
+    box-shadow: 0px 0px 16px rgba(79, 79, 80, 0.15);
+}
+.aboutMobile {
+  width: 100%;
+}
+.aboutMobile button{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #0587FF;
+  background: none;
+  border: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 11px;
+  width: 100%;
+  margin-top: 24px;
+  display: none;
+}
+.aboutMobile button svg{
+  color: #0587FF;
+  transition: 0.3s;
+  width: 16px;
+  height: auto;
+  margin-top: 11px;
+}
+.rotate svg {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 1200px){
+  .card{ 
+    max-width: 217px; 
+  }
+  
+  .avatar img, .avatar{
+    width: 104px;
+    height: 104px
+  }
+  .avatar img.smiley{
+    width: 27px;
+    height: 27px;
+    padding: 7px;
+  }
+}
+
+@media (max-width: 744px){
+  .card{ 
+    max-width: 100%; 
+  }
+  .name{
+    max-width: 215px;
+  }
+
+  .aboutMobile button{
+    display: flex;
+  }
+  .about{
+    background: #F8F8F8;
+    border-radius: 16px;
+    padding: 16px;
+    margin: 11px 0 50px;
+  }
+  .about a:last-child{
+    margin-bottom: 0;
+  }
+}

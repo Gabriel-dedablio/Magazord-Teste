@@ -1,0 +1,81 @@
+.TabsRoot{
+  width: calc(100% - 291px);
+  margin-left: 20px;
+  margin-bottom: 80px;
+}
+
+.TabsList{
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 32px;
+}
+.TabsTrigger{
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 2px solid transparent;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #989898;
+
+}
+.TabsTrigger:first-child{
+  margin-right: 60px;
+}
+.TabsTrigger[data-state = active]{
+  border-bottom: 2px solid #FD8C73;;
+  color: #000000;
+}
+
+.TabsTrigger svg{
+  height: 20px;
+  width: auto;
+  margin-right: 10px;
+}
+.TabsTrigger svg polyline {
+  fill: #000;
+}
+.TabsTrigger span{
+  background: #F8F8F8;
+  border: 1px solid #DBDBDB;
+  border-radius: 59px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #989898;
+  margin-left: 8px;
+  padding: 4px 8px;
+}
+
+@media (max-width: 1200px){
+  .TabsRoot{
+    width: calc(100% - 257px);
+  }
+}
+
+@media (max-width: 744px){
+  .TabsRoot{
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .TabsList{
+    margin: 0;
+  }
+  .TabsTrigger{
+    padding: 10px;
+    justify-content: center;
+  }
+  .TabsTrigger:first-child{
+    margin-right: 0;
+  }
+}
